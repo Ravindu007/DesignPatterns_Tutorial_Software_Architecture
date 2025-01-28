@@ -30,15 +30,17 @@ public class Main {
         Shape rectangle = factory.getShape("Rectangle");
         rectangle.draw();
 
-        Subject subject = new Subject();
 
-        Observer observer1 = new ConcreteObserver("Observer 1");
+        //Testing Observer Pattern
+        Subject subject = new Subject();  //define the subject
+
+        Observer observer1 = new ConcreteObserver("Observer 1");  //define the objects
         Observer observer2 = new ConcreteObserver("Observer 2");
 
-        subject.attach(observer1);
+        subject.attach(observer1);  //attach objects to subjects
         subject.attach(observer2);
 
-        subject.setState("State 1");
+        subject.setState("State 1"); //change the subject state and automatically change object states
         subject.setState("State 2");
 
     }
